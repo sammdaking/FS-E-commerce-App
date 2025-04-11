@@ -4,11 +4,9 @@ import { SlBasketLoaded } from "react-icons/sl";
 import { VscAccount } from "react-icons/vsc";
 
 import { useState } from "react";
-import { Dropdown } from "antd";
 
 import { useNavigate } from "react-router-dom";
 import LanguageDropDown from "../LanguageDrowdown/LanguageDropdown";
-import { FaGlobe } from "react-icons/fa";
 
 const navbar = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -24,13 +22,13 @@ const navbar = () => {
   //   setVisibleButton(true);
   // };
   return (
-    <div className="flex h-18 bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white justify-evenly items-center">
+    <div className="flex  h-18 bg-gradient-to-r from-gray-700 via-gray-900 to-black text-white justify-evenly items-center">
       <div className="">
         <h2
           onClick={navigateHome}
           className=" cursor-pointer text-xs lg:text-xl font-bold"
         >
-          {/* Mermed Medikal */}
+          Mermed Medikal
         </h2>
       </div>
       <div className="w-24 sm:w-16 md:w-56   lg:w-96">
@@ -46,12 +44,12 @@ const navbar = () => {
           value={searchTerm}
         />
       </div>
-      <div className="flex justify-around items-center  gap-12">
+      <div className="flex justify-around items-center  gap-10">
         <SlBasketLoaded size={25} className="cursor-pointer" />
         <VscAccount size={25} className="cursor-pointer" />
       </div>
 
-      <div className="h-5 flex space-x-1">
+      <div className="h-5  flex ">
         <LanguageDropDown />
       </div>
     </div>

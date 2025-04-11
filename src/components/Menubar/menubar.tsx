@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import type { MenuProps } from "antd";
 import { Menu } from "antd";
 import { useTranslation } from "react-i18next";
-//import menu from "../";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -14,78 +13,80 @@ const menubar: React.FC = () => {
 
   const items: MenuItem[] = [
     {
-      label: t("menu.patient_care_products"), // "Patient Care Products" için çeviri anahtarı
+      label: t("navbar.Discounted_Products"),
+      key: "SubMenu7",
+    },
+    {
+      label: t("navbar.Patient_Care_Products"), // Patient Care Products
       key: "SubMenu1",
       children: [
         {
           type: "group",
           children: [
-            { label: t("menu.toiletries"), key: "setting:1" }, // "Toiletries" için çeviri anahtarı
-            { label: t("menu.wound_care_products"), key: "setting:2" }, // "Wound Care Products" için çeviri anahtarı
-            { label: t("menu.hygiene_and_cleaning"), key: "setting:3" }, // "Hygiene and Cleaning" için çeviri anahtarı
-            { label: t("menu.first_aid_products"), key: "setting:4" }, // "First Aid Products" için çeviri anahtarı
-            { label: t("menu.disinfection_products"), key: "setting:5" }, // "Disinfection Products" için çeviri anahtarı
+            { label: t("navbar.Toiletries"), key: "setting:1" }, // Toilettries
+            { label: t("navbar.Wound_Care_Products"), key: "setting:2" }, // Wound Care Products
+            { label: t("navbar.Hygiene_and_Cleaning"), key: "setting:3" }, // Hygiene And Cleaning
+            { label: t("navbar.First_Aid_Products"), key: "setting:4" }, // First Aid Products
+            { label: t("navbar.Disinfection_Products"), key: "setting:5" }, // Disinfection Products
             {
-              label: t("menu.hospital_beds_and_accessories"),
+              label: t("navbar.Hospital_Beds_and_Accessories"),
               key: "setting:6",
-            }, // "Hospital Beds and Accessories" için çeviri anahtarı
-            { label: t("menu.adult_diapers"), key: "setting:7" }, // "Adult Diapers" için çeviri anahtarı
-            { label: t("menu.air_mattress"), key: "setting:8" }, // "Air Mattress" için çeviri anahtarı
+            }, // Hospital Beds And Accessories
+            { label: t("navbar.Adult_Diapers"), key: "setting:7" }, // Adult Diapers
+            { label: t("navbar.Air_Mattress"), key: "setting:8" }, // Air Mattress
           ],
         },
       ],
     },
     {
-      label: t("menu.medical_devices"), // "Medical Devices" için çeviri anahtarı
+      label: t("navbar.Medical_Devices"), // Medical Devices
       key: "SubMenu2",
       children: [
         {
           type: "group",
           children: [
-            { label: t("menu.weighing_products"), key: "setting:9" }, // "Weighing Products" için çeviri anahtarı
-            { label: t("menu.nebulizer_devices"), key: "setting:10" }, // "Nebulizer Devices" için çeviri anahtarı
+            { label: t("navbar.Weighing_Products"), key: "setting:9" }, // Weighing Products
+            { label: t("navbar.Nebulizer_Devices"), key: "setting:10" }, // Nebulizer Devices
             {
-              label: t("menu.blood_glucose_monitoring_devices"),
+              label: t("navbar.Blood_Glucose_Monitoring_Devices"),
               key: "setting:11",
-            }, // "Blood Glucose Monitoring Devices" için çeviri anahtarı
-            { label: t("menu.massage_devices"), key: "setting:12" }, // "Massage Devices" için çeviri anahtarı
-            { label: t("menu.blood_pressure_monitors"), key: "setting:13" }, // "Blood Pressure Monitors" için çeviri anahtarı
-            { label: t("menu.humidifier"), key: "setting:14" }, // "Humidifier" için çeviri anahtarı
-            { label: t("menu.oximeter"), key: "setting:15" }, // "Oximeter" için çeviri anahtarı
-            { label: t("menu.stethoscope"), key: "setting:16" }, // "Stethoscope" için çeviri anahtarı
-            { label: t("menu.oxygen_concentrator"), key: "setting:17" }, // "Oxygen Concentrator" için çeviri anahtarı
+            }, // Blood Glucose Monitoring Devices
+            { label: t("navbar.Massage_Devices"), key: "setting:12" }, // Massage Devices
+            { label: t("navbar.Blood_Pressure_Monitors"), key: "setting:13" }, // Blood Pressure Monitors
+            { label: t("navbar.Humidifier"), key: "setting:14" }, // Humidifier
+            { label: t("navbar.Oximeter"), key: "setting:15" }, // Oximeter
+            { label: t("navbar.Stethoscope"), key: "setting:16" }, // Stethoscope
+            { label: t("navbar.Oxygen_Concentrator"), key: "setting:17" }, // Oxygen Concentrator
           ],
         },
       ],
     },
     {
-      label: t("menu.orthopedic_products"), // "Orthopedic Products" için çeviri anahtarı
+      label: t("navbar.Orthopedic_Products"), // Orthopedic Products
       key: "SubMenu3",
       children: [
         {
           type: "group",
           children: [
-            { label: t("menu.medical_corset"), key: "setting:18" }, // "Medical Corset" için çeviri anahtarı
-            { label: t("menu.foot_supports"), key: "setting:19" }, // "Foot Supports" için çeviri anahtarı
-            { label: t("menu.cane"), key: "setting:20" }, // "Cane" için çeviri anahtarı
-            { label: t("menu.knee_braces"), key: "setting:21" }, // "Knee Braces" için çeviri anahtarı
-            { label: t("menu.resting_varicose_stockings"), key: "setting:22" }, // "Resting & Varicose Stockings" için çeviri anahtarı
-            { label: t("menu.bathroom_supports"), key: "setting:23" }, // "Bathroom Supports" için çeviri anahtarı
-            { label: t("menu.walking_aids"), key: "setting:24" }, // "Walking Aids" için çeviri anahtarı
-            { label: t("menu.baby_care_products"), key: "setting:25" }, // "Baby Care Products" için çeviri anahtarı
-            { label: t("menu.orthopedic_products_general"), key: "setting:26" }, // "Orthopedic Products" için çeviri anahtarı (genel)
-            { label: t("menu.orthopedic_slippers"), key: "setting:27" }, // "Orthopedic Slippers" için çeviri anahtarı
-            { label: t("menu.orthopedic_pillows"), key: "setting:28" }, // "Orthopedic Pillows" için çeviri anahtarı
+            { label: t("navbar.Medical_Corset"), key: "setting:18" }, // Medical Corset
+            { label: t("navbar.Foot_Supports"), key: "setting:19" }, // Foot Supports
+            { label: t("navbar.Cane"), key: "setting:20" }, // Cane
+            { label: t("navbar.Knee_Braces"), key: "setting:21" }, // Knee Braces
             {
-              label: t("menu.orthopedic_pillows_duplicate"),
-              key: "setting:29",
-            }, // Tekrar eden girdi için farklı bir anahtar
+              label: t("navbar.Resting_Varicose_Stockings"),
+              key: "setting:22",
+            }, // Resting Varicose Stockings
+            { label: t("navbar.Bathroom_Supports"), key: "setting:23" }, // Bathroom Supports
+            { label: t("navbar.Walking_Aids"), key: "setting:24" }, // Walking Aids
+            { label: t("navbar.Baby_Care_Products"), key: "setting:25" }, // Baby Care Products
+            { label: t("navbar.Orthopedic_Slippers"), key: "setting:27" }, // Orthopedic Slippers
+            { label: t("navbar.Orthopedic_Pillows"), key: "setting:28" }, // Orthopedic Pillows
           ],
         },
       ],
     },
     {
-      label: "Fizik Tedavi",
+      label: t("navbar.Physiotherapy"),
       key: "SubMenu4",
 
       children: [
@@ -102,37 +103,14 @@ const menubar: React.FC = () => {
     },
 
     {
-      label: "Tekerlekli Sandalye",
+      label: t("navbar.Wheelchair"),
       key: "SubMenu5",
-
-      children: [
-        {
-          type: "group",
-          children: [
-            { label: "Option 1", key: "setting:1" },
-            { label: "Option 2", key: "setting:2" },
-            { label: "Option 3", key: "setting:3" },
-            { label: "Option 4", key: "setting:4" },
-          ],
-        },
-      ],
     },
-    // {
-    //   label: "Sarf Malzeme",
-    //   key: "SubMenu6",
 
-    //   children: [
-    //     {
-    //       type: "group",
-    //       children: [
-    //         { label: "Option 1", key: "setting:1" },
-    //         { label: "Option 2", key: "setting:2" },
-    //         { label: "Option 3", key: "setting:3" },
-    //         { label: "Option 4", key: "setting:4" },
-    //       ],
-    //     },
-    //   ],
-    // },
+    {
+      label: t("navbar.Massage_Equipment"),
+      key: "SubMenu6",
+    },
   ];
 
   const onClick: MenuProps["onClick"] = (e) => {
@@ -146,7 +124,7 @@ const menubar: React.FC = () => {
       selectedKeys={[current]}
       mode="horizontal"
       items={items}
-      className=""
+      className="w-full flex justify-evenly"
     />
   );
 };

@@ -9,11 +9,11 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div className="min-h-screen justify-between flex flex-col ">
-      <div className="h-1/4  w-full flex flex-col">
+      <div className="h-1/4   w-full flex flex-col">
         <div>
           <Navbar />
         </div>
-        <div className="flex h-full w-full  justify-center bg-white ">
+        <div className="flex h-full w-full  justify-center bg-red-500 ">
           <Menubar />
         </div>
       </div>

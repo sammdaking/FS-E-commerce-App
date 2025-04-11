@@ -32,8 +32,21 @@ const Signup: React.FC = () => {
   };
   const onSubmit = async (data: ISignInPayload) => {
     try {
-      const { email, password } = data;
-      const { error } = await supabase.auth.signUp({ email, password });
+      const { data, error } = await supabase.auth.signUp(
+        {
+          email: email,
+          password: password,
+        },
+        {
+          data: {
+            user_name: name,
+            user_surname: surname,
+            user_adress: address,
+            user_phone_number: phoneNumber,
+          },
+        }
+      );
+
       if (error) throw error;
       alert("Signup Succes");
     } catch (error: any) {
